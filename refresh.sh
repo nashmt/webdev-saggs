@@ -23,7 +23,6 @@ echo "Verify server is running"
 sudo systemctl status nginx
 
 echo "Done"
-echo "***************************************"
-
+echo "**************************************"
 
 
