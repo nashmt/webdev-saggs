@@ -4,8 +4,10 @@ git pull origin master
 
 echo "Changing file contexts for nginx to read"
 sudo chcon -Rt httpd_sys_content_t /home/centos/mattwebdev/public/webdev-saggs/
+sudo chcon -Rt httpd_sys_content_t /home/centos/mattwebdev/public/webdev-saggs/web-app
 
 echo "Check to see file contexts"
+sudo ls -lZ /home/centos/mattwebdev/public/webdev-saggs/
 sudo ls -lZ /home/centos/mattwebdev/public/webdev-saggs/
 
 
