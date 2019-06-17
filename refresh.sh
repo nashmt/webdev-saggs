@@ -2,7 +2,7 @@
 
 
 echo "Pulling origin master from github."
-git pull origin master
+git checkout -f web-app-0
 
 echo "Changing file contexts for nginx to read"
 sudo chcon -Rt httpd_sys_content_t /home/centos/mattwebdev/public/webdev-saggs/
