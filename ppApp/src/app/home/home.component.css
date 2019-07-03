@@ -7,5 +7,6 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 #home-hero {
     border-bottom: groove 3px rgba(150,150,225, .4); 
     opacity: .8;
+    background-color: rgba(248, 240, 240, 0.8);
 
 }
