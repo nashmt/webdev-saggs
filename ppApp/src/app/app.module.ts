@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     LoginComponent,
     AlertComponent,
     RegisterComponent,
-    DashboardComponent
+    DashboardComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
