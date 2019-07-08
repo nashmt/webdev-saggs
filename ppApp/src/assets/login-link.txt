@@ -1,0 +1,7 @@
+Original URL
+
+https://<your_domain>/login?response_type=token&client_id=<your_app_client_id>&redirect_uri=<your_callback_url>
+
+
+
+https://52.207.243.58/login?response_type=token&client_id=1e6q1kkegc508q4je1u9mrhr78&redirect_uri=https://52.207.243.58/dashboard

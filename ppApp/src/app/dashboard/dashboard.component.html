@@ -1,9 +1,28 @@
-<h1>Hi {{currentUser.firstName}}!</h1>
-<p>You're logged in with Angular 8!!</p>
+<div id='dash-body' class='container-fluid'><h1>Active Trials</h1>
+    <div id='dash-content' class='jumbotron-fluid jumbotron'>
+        <ul>
+            <li *ngFor='let user of users'>
+                    <div class="card w-25 p-2">
+                        <img class="card-img-top" src="assets/images/saggs_logo_2.png" width ='100' alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Our Products</h4>
+                            <p class="card-text">
+                                Software AG boasts state-of-the-art integration technology to help show you what matters most.
+                              </p>
+                              <a href="#!" class="btn btn-primary">Learn more</a>
+                            </div>
+                          </div>
+            </li>
+        </ul>
+    </div>
 <h3>All registered users:</h3>
 <ul>
     <li *ngFor="let user of users">
         {{user.username}} ({{user.firstName}} {{user.lastName}})
         - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
     </li>
+    <!-- put logic for creating quick access to products here-->
+    <app-access-products></app-access-products>
 </ul>
+
+</div>
