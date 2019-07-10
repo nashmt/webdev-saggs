@@ -6,7 +6,7 @@ import { UserService, AuthenticationService, ProductsService } from '../_service
 
 
 @Component({ templateUrl: 'dashboard.component.html' })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent {
     currentUser: User;
     users = [];
     products = [];
@@ -17,10 +17,6 @@ export class DashboardComponent implements OnInit {
         private productService: ProductsService
     ) {
         this.currentUser = this.authenticationService.currentUserValue;
-    }
-
-    ngOnInit() {
-        this.loadAllUsers();
     }
 
     deleteUser(id: number) {

@@ -1,35 +1,18 @@
 <div id='dash-body' class='container-fluid'>
     <ul class='nav nav-pills d-flex flex-nowrap' id='dash-quick-nav'>
       <li class="nav-item p-2">
-        <a class='nav-link active' href='#!'>Active Trials</a>
+        <a class='nav-link active' href='./myAccess'>myAccess</a>
       </li>
       <li class="nav-item p-2">
-        <a class='nav-link' routerLink='./pending'>Pending Requests</a>
+        <a class='nav-link' routerLink='./products'>Products</a>
       <li class="nav-item p-2">
-        <a class='nav-link' routerLink='./request-form'>Request Form</a>
+        <a class='nav-link' routerLink='./request-form'>Documentation</a>
         </li>
     </ul>
 
-    <h1>Active Trials</h1>
-    <div id='dash-content' class='jumbotron-fluid jumbotron'>
-        <ul>
-            <li *ngFor='let product of products'>
-                    <div class="card w-25 p-2">
-                        <img class="card-img-top" src="assets/images/saggs_logo_2.png" width ='100' alt="Card image cap">
-                        <div class="card-body">
-                            <h4 class="card-title">{{product.title}}</h4>
-                            <p class="card-text">
-                                {{product.description}}
-                              </p>
-                              <a href="#!" class="btn btn-primary">Launch</a>
-                              <a href='#!' class='btn btn-secondary'>Documentation</a>
-                        </div>
-                    </div>
-            </li>
-        </ul>
-    </div>
-
     <app-access-products></app-access-products>
-    <app-bootstrap-request></app-bootstrap-request>
+
+    <h2>Pending Requests</h2>
+    <app-pending-requests></app-pending-requests>
 
 </div>
