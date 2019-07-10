@@ -1,0 +1,30 @@
+<div id='dash-body' class='container-fluid'>
+        <ul class='nav nav-pills d-flex flex-nowrap' id='dash-quick-nav'>
+          <li class="nav-item p-2">
+            <a class='nav-link' href='#!'>Active Trials</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class='nav-link' routerLink='../pending'>Pending Requests</a>
+          <li class="nav-item p-2">
+            <a class='nav-link active' routerLink='./request-form'>Request Form</a>
+            </li>
+        </ul>
+    
+
+<div *ngIf="requested_product; else noSubmit">
+        <h2>Requesting Access to {{requested_product}}...</h2>
+    
+        <form>
+            <label for="reason">Reason for request:</label>
+            <input class="form-control" type="text" id="reason" placeholder="Reason"> 
+            <br>
+    
+            <a href="/action-result?requested_product={{requested_product}}" class="btn btn-primary">Submit</a>
+        </form>
+    </div>
+    <ng-template #noSubmit>
+        No product selected. <br>
+        <a href="/bootstrap-request">Return to list of Products</a>
+    </ng-template>
+    
+</div>

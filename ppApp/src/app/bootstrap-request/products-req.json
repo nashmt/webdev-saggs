@@ -1,0 +1,48 @@
+{
+	"products": [
+		{
+			"name": "Aris", 
+			"doc_url": "https://softwareaggov.com/products/aris/"
+		},
+		{
+			"name": "WebMethods", 
+			"doc_url": "https://softwareaggov.com/products/webmethods/"
+		},
+		{
+			"name": "Adabas-Natural", 
+			"doc_url": "https://softwareaggov.com/products/adabas-natural/"
+		},
+		{
+			"name": "Alfabet", 
+			"doc_url": "https://softwareaggov.com/products/products-alfabet/"
+		},
+		{
+			"name": "Business and IT Information", 
+			"doc_url": "https://softwareaggov.com/products/business-it-transformation/"
+		},
+		{
+			"name": "Analytics and Decisions", 
+			"doc_url": "https://softwareaggov.com/products/analytics-decisions/"
+		},
+		{
+			"name": "Process and Applications", 
+			"doc_url": "https://softwareaggov.com/products/process/"
+		},
+		{
+			"name": "Hybrid Integration", 
+			"doc_url": "https://softwareaggov.com/products/integration/"
+		},
+		{
+			"name": "In-memory Data Management Platform", 
+			"doc_url": "https://softwareaggov.com/products/in-memory-data/"
+		},
+		{
+			"name": "Transaction Processing", 
+			"doc_url": "https://softwareaggov.com/products/transaction-processing/"
+		},
+		{
+			"name": "Mainframe Modernization", 
+			"doc_url": "https://softwareaggov.com/products/mainframe-modernization/"
+		}
+	]
+}

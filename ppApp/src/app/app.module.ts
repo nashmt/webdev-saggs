@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule, FormsModule }    from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers';
 
@@ -16,7 +15,9 @@ import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AdminComponent } from './admin/admin.component';
 import { AccessProductsComponent } from './access-products/access-products.component';
-
+import { BootstrapRequestComponent } from './bootstrap-request/bootstrap-request.component';
+import { PendingRequestsComponent } from './pending-requests/pending-requests.component';
+import { RequestFormComponent } from './request-form/request-form.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,10 @@ import { AccessProductsComponent } from './access-products/access-products.compo
     RegisterComponent,
     DashboardComponent,
     AdminComponent,
-    AccessProductsComponent
+    AccessProductsComponent,
+    BootstrapRequestComponent,
+    PendingRequestsComponent,
+    RequestFormComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +39,7 @@ import { AccessProductsComponent } from './access-products/access-products.compo
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule
+
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

@@ -1,0 +1,19 @@
+<h2>Pending Requests</h2>
+<table class="table table-light table-hover">
+    <thead class='thead-dark'>
+      <tr>
+        <th>Product</th>
+        <th>Documentation</th>
+        <th>Cancel Request</th>
+      </tr>
+    </thead>
+    <tbody class="pending">
+      <tr *ngFor="let product of pending">
+              <th scope="row">{{product.title}}</th>
+              <td><a class="imagelink" href="{{product.doc_url}}"> <img src="assets/icons/eclipse/alltopics_co.gif" alt="Documentation" height="30"></a></td>
+              <td><a class="imagelink" href="http://localhost"><img src="assets/icons/IS/delete.gif" alt="Cancel Request" height="30"></a></td>
+      </tr>
+    </tbody>
+  </table>
+
+
