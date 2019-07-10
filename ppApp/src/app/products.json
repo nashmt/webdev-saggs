@@ -1,0 +1,33 @@
+{
+    "products": [
+        {
+        "prodId": "01",
+        "title": "webMethods",
+        "description": "Need to integrate systems on-premises, in the cloud or in a hybrid combination? Gain the fleibility you need with Software AG's webMethods Integration Platform.",
+        "imgUrl":"",
+        "docUrl":"",
+        "accessUrl":""
+        }, {
+        "prodId": "02",
+        "title":"Alfabet",
+        "description": "Alfabet description",
+        "imgUrl":"",
+        "docUrl":"",
+        "accessUrl":""
+        },{
+        "prodId": "03",
+        "title":"ARIS",
+        "description":"Software AG's ARIS Business Modeling Platform is ideal for organizations that want to document, analyze, standardize and improve their processes.",
+        "imgUrl":"",
+        "docUrl":"",
+        "accessUrl":""
+        }, {
+        "prodId": "04",
+        "title":"Adabas & Natural Application Modernization",
+        "description":"Software AG's Adabas & Natural Application Modernization Platform transforms existing enterprise applications to better meet business demands and deliver continued value.",
+        "imgUrl":"",
+        "docUrl":"",
+        "accessUrl":""
+        }
+    ]   
+}

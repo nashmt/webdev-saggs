@@ -1,6 +1,6 @@
-<div class='w-50 d-flex justify-content-center'>
+<div class='container-fluid'>
     <h2>Login</h2>
-<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class='w-50'>
     <div class="form-group">
         <label for="username">Username</label>
         <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />

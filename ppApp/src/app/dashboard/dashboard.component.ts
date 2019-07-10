@@ -1,17 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { first } from 'rxjs/operators';
 
-import { User } from '../_models/index';
-import { UserService, AuthenticationService } from '../_services/index';
+import { User, Product } from '../_models/index';
+import { UserService, AuthenticationService, ProductsService } from '../_services/index';
+
 
 @Component({ templateUrl: 'dashboard.component.html' })
 export class DashboardComponent implements OnInit {
     currentUser: User;
     users = [];
+    products = [];
 
     constructor(
         private authenticationService: AuthenticationService,
-        private userService: UserService
+        private userService: UserService,
+        private productService: ProductsService
     ) {
         this.currentUser = this.authenticationService.currentUserValue;
     }

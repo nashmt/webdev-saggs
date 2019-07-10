@@ -8,38 +8,37 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
   </head>
   <body>
+    <div id='app-header' class='justify-content-between'>
       <nav class="navbar navbar-dark bg-dark">
-        <div class='d-flex justify-content-between'>
+
           <a class="navbar-brand p-2" href="#"><img src="assets/images/saggs_logo_2.1.png" class="img-fluid" alt="Responsive image"></a>
-          <div class='d-flex justify-content-end p-2'>
-          <a href='https://52.207.243.58/login?response_type=token&client_id=1e6q1kkegc508q4je1u9mrhr78&redirect_uri=https://52.207.243.58/dashboard'><button type="button" class="btn btn-primary mx-2 p-2">Login/Register</button></a>
-          <button class="navbar-toggler p-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="p-2">
+          <a href='https://partners-softwareaggov.auth.us-east-1.amazoncognito.com/login?response_type=token&client_id=1e6q1kkegc508q4je1u9mrhr78&redirect_uri=https://52.207.243.58/dashboard'><button type="button" class="btn btn-primary mx-2">Login/Register</button></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          </div>
-      </div>
+        </div>
         
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto p-2" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <li class="nav-item active no-b">
+                <a class="nav-link" routerLink='/home'>Home <span class="sr-only">(current)</span></a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item no-b">
                 <a class="nav-link" href="#">Partners</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item no-b">
                 <a class="nav-link" href="#">Products</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item no-b">
                   <a class="nav-link" href="#">Solutions</a>
               </li>
               <li class="nav-item">
                 <a class='nav-link' routerLink='/dashboard'>User View</a>
               </li> 
-              <li class="nav-item">
+              <li class="nav-item no-b">
                 <a class='nav-link' routerLink='/admin'>Admin View</a>
               </li>
             </ul>
@@ -49,6 +48,7 @@
             </form>
           </div> 
         </nav>
+        </div>
         
 
     

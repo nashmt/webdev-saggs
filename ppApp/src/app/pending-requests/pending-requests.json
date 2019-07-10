@@ -1,0 +1,12 @@
+{
+    "products": [
+        {
+			"name": "Aris", 
+			"doc_url": "https://softwareaggov.com/products/aris/"
+		},
+		{
+			"name": "WebMethods", 
+			"doc_url": "https://softwareaggov.com/products/webmethods/"
+		}
+    ]
+}

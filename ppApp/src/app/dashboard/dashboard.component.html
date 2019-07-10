@@ -1,17 +1,30 @@
-<div id='dash-body' class='container-fluid'><h1>Active Trials</h1>
+<div id='dash-body' class='container-fluid'>
+    <ul class='nav nav-pills d-flex flex-nowrap' id='dash-quick-nav'>
+      <li class="nav-item p-2">
+        <a class='nav-link active' href='#!'>Active Trials</a>
+      </li>
+      <li class="nav-item p-2">
+        <a class='nav-link' routerLink='dashboard/pending'>Pending Requests</a>
+      <li class="nav-item p-2">
+        <a class='nav-link' routerLink='dasboard/request-form'>Request Form</a>
+        </li>
+    </ul>
+
+    <h1>Active Trials</h1>
     <div id='dash-content' class='jumbotron-fluid jumbotron'>
         <ul>
-            <li *ngFor='let user of users'>
+            <li *ngFor='let product of products'>
                     <div class="card w-25 p-2">
                         <img class="card-img-top" src="assets/images/saggs_logo_2.png" width ='100' alt="Card image cap">
                         <div class="card-body">
-                            <h4 class="card-title">Our Products</h4>
+                            <h4 class="card-title">{{product.title}}</h4>
                             <p class="card-text">
-                                Software AG boasts state-of-the-art integration technology to help show you what matters most.
+                                {{product.description}}
                               </p>
-                              <a href="#!" class="btn btn-primary">Learn more</a>
-                            </div>
-                          </div>
+                              <a href="#!" class="btn btn-primary">Launch</a>
+                              <a href='#!' class='btn btn-secondary'>Documentation</a>
+                        </div>
+                    </div>
             </li>
         </ul>
     </div>
