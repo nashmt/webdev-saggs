@@ -1,3 +1,16 @@
+<div id='dash-body' class='container-fluid'>
+        <ul class='nav nav-pills d-flex flex-nowrap' id='dash-quick-nav'>
+          <li class="nav-item p-2">
+            <a class='nav-link' href='#!'>Active Trials</a>
+          </li>
+          <li class="nav-item p-2">
+            <a class='nav-link' routerLink='../pending'>Pending Requests</a>
+          <li class="nav-item p-2">
+            <a class='nav-link active' routerLink='./request-form'>Request Form</a>
+            </li>
+        </ul>
+    
+
 <div *ngIf="requested_product; else noSubmit">
         <h2>Requesting Access to {{requested_product}}...</h2>
     
@@ -14,3 +27,4 @@
         <a href="/bootstrap-request">Return to list of Products</a>
     </ng-template>
     
+</div>

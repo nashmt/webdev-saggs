@@ -4,9 +4,9 @@
         <a class='nav-link active' href='#!'>Active Trials</a>
       </li>
       <li class="nav-item p-2">
-        <a class='nav-link' routerLink='dashboard/pending'>Pending Requests</a>
+        <a class='nav-link' routerLink='./pending'>Pending Requests</a>
       <li class="nav-item p-2">
-        <a class='nav-link' routerLink='dasboard/request-form'>Request Form</a>
+        <a class='nav-link' routerLink='./request-form'>Request Form</a>
         </li>
     </ul>
 
@@ -28,14 +28,8 @@
             </li>
         </ul>
     </div>
-<h3>All registered users:</h3>
-<ul>
-    <li *ngFor="let user of users">
-        {{user.username}} ({{user.firstName}} {{user.lastName}})
-        - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
-    </li>
-    <!-- put logic for creating quick access to products here-->
+
     <app-access-products></app-access-products>
-</ul>
+    <app-bootstrap-request></app-bootstrap-request>
 
 </div>
