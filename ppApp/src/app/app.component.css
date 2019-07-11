@@ -1,3 +1,6 @@
 .no-b {
     border: none;
 }
+li a{
+    text-align: right;
+}

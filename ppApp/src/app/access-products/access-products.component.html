@@ -1,16 +1,17 @@
 <h2>Active Trials</h2>
     <div id='dash-content' class='jumbotron-fluid jumbotron'>
-        <ul>
-            <li *ngFor='let product of products'>
-                    <div class="card w-25 p-2">
-                        <img class="card-img-top" src="assets/images/saggs_logo_2.png" width ='100' alt="Card image cap">
+        <ul class="d-flex flex-fill">
+            <li *ngFor="let product of products" class='p-2'>
+                    <div class="card access">
+                        <img class="card-img-top" src="{{product.imgUrl}}" width ='100' alt="Card image cap">
                         <div class="card-body">
                             <h4 class="card-title">{{product.title}}</h4>
                             <p class="card-text">
                                 {{product.description}}
                               </p>
+                              
                               <a href="#!" class="btn btn-primary">Launch</a>
-                              <a href='#!' class='btn btn-secondary'>Documentation</a>
+                              <a href={{product.docUrl}} class='btn btn-secondary'>Documentation</a>
                         </div>
                     </div>
             </li>

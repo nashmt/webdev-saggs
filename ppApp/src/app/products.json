@@ -2,17 +2,17 @@
     "products": [
         {
         "prodId": "01",
-        "title": "webMethods",
-        "description": "Need to integrate systems on-premises, in the cloud or in a hybrid combination? Gain the fleibility you need with Software AG's webMethods Integration Platform.",
+        "title": "Integration",
+        "description": "Need to integrate systems on-premises, in the cloud or in a hybrid combination?",
         "imgUrl":"",
-        "docUrl":"",
+        "docUrl":"https://www.softwareag.com/us/products/webmethods_integration/default.html",
         "accessUrl":""
         }, {
         "prodId": "02",
         "title":"Alfabet",
         "description": "Alfabet description",
-        "imgUrl":"",
-        "docUrl":"",
+        "imgUrl":"assets/images/alfabet.png",
+        "docUrl":"https://softwareaggov.com/products/products-alfabet/",
         "accessUrl":""
         },{
         "prodId": "03",
@@ -23,10 +23,10 @@
         "accessUrl":""
         }, {
         "prodId": "04",
-        "title":"Adabas & Natural Application Modernization",
-        "description":"Software AG's Adabas & Natural Application Modernization Platform transforms existing enterprise applications to better meet business demands and deliver continued value.",
+        "title": "API Management",
+        "description":"Using webMethods.io API, you can securely manage and expose your APIs to the world.",
         "imgUrl":"",
-        "docUrl":"",
+        "docUrl":"https://www.softwareag.com/us/products/api/default.html",
         "accessUrl":""
         }
     ]   

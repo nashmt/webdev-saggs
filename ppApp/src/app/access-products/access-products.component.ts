@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Product } from '../_models/product';
-import { PRODUCTS } from '../_helpers/product.helper';
-
+import { PENDING, PRODUCTS, ACCESS, } from '../_helpers/index';
+import { Product } from '../_models/index';
 @Component({
   selector: 'app-access-products',
   templateUrl: './access-products.component.html',
@@ -16,7 +15,7 @@ export class AccessProductsComponent implements OnInit {
 
   ngOnInit() {
 
-    this.products = PRODUCTS;
+    this.products = ACCESS;
   }
 
 }
