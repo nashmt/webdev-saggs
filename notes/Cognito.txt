@@ -1,0 +1,41 @@
+
+I am trying to set up the Cognito SDK in our Angular project.
+
+I'm starting with the "Identity SDK for Javascript"
+
+    "npm install --save-dev webpack json-loader"
+    "npm install --save amazon-cognito-identity-js"
+
+        I ran both of these in the root-directory of the project
+
+    Next, I am supposed to add a file called "webpack.config.js"
+
+        It appears, however, that Angular already created this file
+
+        Although the contents are very different
+
+    Then, I am to create an empty file "entry.js" in the "src" directory (also created by angular)
+
+        This file is referenced in the "webpack" file in the instructions,
+        but Angular's "webpack" references a different file, also in "src", which already exists
+
+        So, for now, I think I'll just leave both of these files as is, and not create "entry.js"
+
+    Finally, I was supposed to add a "build" script to "package.json", but, once again, one was already there.
+
+        So I'll also leave this file as-is, and just see if this works
+
+
+I'll be putting all the logic in "dashboard.component.ts",
+since that's where the Cognito login-page redirects
+
+The server wouldn't start because "require" couldn't be found
+
+    "npm install @types/node --save-dev"
+
+    and then adding "node" to "types in "tsconfig.app.json" fixed it.
+
+    
+
+NOTE: I have yet to touch "Auth SDK for Javascript"
+
