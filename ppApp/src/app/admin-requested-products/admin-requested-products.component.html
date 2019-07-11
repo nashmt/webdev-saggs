@@ -1,0 +1,35 @@
+<div id='dash-body' class='container-fluid'>
+    <ul class='nav nav-pills d-flex flex-nowrap' id='dash-quick-nav'>
+      <li class="nav-item p-2">
+        <a class='nav-link' routerLink='../partners'>Partners</a>
+      </li>
+      <li class="nav-item p-2">
+        <a class='nav-link active' routerLink='../requests'>Requests</a>
+      <li class="nav-item p-2">
+        <a class='nav-link disabled' routerLink='../request-form'>Analytics</a>
+        </li>
+    </ul>
+
+
+<table class="table table-light">
+        <thead class='thead-dark'>
+          <tr>
+            <th>Partner</th>
+            <th>Product</th>
+            <th>Request Date</th>
+            <th>Grant Access</th>
+            <th>Deny Access</th>
+          </tr>
+        </thead>
+        <tbody class="pending">
+          <tr *ngFor="let product of pending">
+                  <td>Partner Name</td>
+                  <th scope="row">{{product.title}}</th>
+                  <td>07/07/2019 12:00:00</td>
+                  <td><img src="assets/icons/green_check.gif" alt="Documentation" height="30"></td>
+                  <td><a class="imagelink" href="/denial-form?denied_product={{product.name}}"><img src="assets/icons/delete.gif" alt="Deny Request" height="30"></a></td>
+          </tr>
+        </tbody>
+    </table>
+    
+</div>

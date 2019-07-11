@@ -9,6 +9,8 @@ import { BootstrapRequestComponent } from './bootstrap-request/bootstrap-request
 import { PendingRequestsComponent } from './pending-requests/pending-requests.component';
 import { RequestFormComponent } from './request-form/request-form.component';
 import { AuthGuard } from './_helpers';
+import { AdminRequestedProductsComponent } from './admin-requested-products/admin-requested-products.component';
+import { InMemoryDataService }  from './in-memory-data.service';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -20,7 +22,9 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'admin', component: AdminComponent }
+  { path: 'admin', redirectTo: '/admin/partners', pathMatch: 'full'},
+  { path: 'admin/partners', component: AdminComponent },
+  { path: 'admin/requests', component: AdminRequestedProductsComponent }
 
 ];
 

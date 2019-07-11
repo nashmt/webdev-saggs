@@ -1,0 +1,17 @@
+<div align="center">
+        <div *ngIf="requested_product; else refusal">
+            <h1>Access to {{requested_product}} {{result}}</h1>
+        </div>
+        
+        <ng-template #refusal>
+            <div *ngIf="denied_product; else noAction">
+                <h1>Access to {{denied_product}} {{result}}</h1>
+            </div>
+            <ng-template #noAction>
+                <h2>{{result}}</h2> <br>
+                <a href="/bootstrap-request">Return to list of Products</a>
+            </ng-template>
+        </ng-template>
+    
+    </div>
+    

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { PENDING } from '../_helpers/index'
+import { PENDING } from '../_helpers/index';
 
 @Component({
   selector: 'app-pending-requests',

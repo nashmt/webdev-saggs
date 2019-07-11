@@ -1,0 +1,12 @@
+{
+    "products": [
+        {
+            "prodId": "04",
+            "title": "API Management",
+            "description":"Using webMethods.io API, you can securely manage and expose your APIs to the world.",
+            "imgUrl":"assets/images/webmethods.jpg",
+            "docUrl":"https://www.softwareag.com/us/products/api/default.html",
+            "accessUrl":""
+            }
+        ]
+}

@@ -18,6 +18,12 @@ import { AccessProductsComponent } from './access-products/access-products.compo
 import { BootstrapRequestComponent } from './bootstrap-request/bootstrap-request.component';
 import { PendingRequestsComponent } from './pending-requests/pending-requests.component';
 import { RequestFormComponent } from './request-form/request-form.component';
+import { ActionResultComponent } from './action-result/action-result.component';
+import { AdminRequestedProductsComponent } from './admin-requested-products/admin-requested-products.component';
+import { InMemoryDataService }  from './in-memory-data.service';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { PartnerPageComponent } from './partner-page/partner-page.component';
+import { ManagePartnersComponent } from './manage-partners/manage-partners.component';
 
 @NgModule({
   declarations: [
@@ -31,14 +37,19 @@ import { RequestFormComponent } from './request-form/request-form.component';
     AccessProductsComponent,
     BootstrapRequestComponent,
     PendingRequestsComponent,
-    RequestFormComponent
+    RequestFormComponent,
+    ActionResultComponent,
+    AdminRequestedProductsComponent,
+    PartnerPageComponent,
+    ManagePartnersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation: false})
 
   ],
   providers: [
