@@ -62,7 +62,7 @@ export class DashboardComponent implements OnInit {
     }
 
     private loadAllUsers() {
-        this.userService.getAll()
+        this.userService.getUsers()
             .pipe(first())
             .subscribe(users => this.users = users);
     }

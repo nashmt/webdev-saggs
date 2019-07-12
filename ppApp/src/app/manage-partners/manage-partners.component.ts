@@ -19,6 +19,6 @@ export class ManagePartnersComponent implements OnInit {
 
   getUsers(): void {
     this.userService.getUsers()
-    .subscribe(partners => this.users = partners);
+    .subscribe(users => this.users = users);
   }
 }

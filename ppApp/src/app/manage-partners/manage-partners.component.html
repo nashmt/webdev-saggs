@@ -1,8 +1,8 @@
 
 
-<h2>My Users</h2>
+<h2>Partners</h2>
 
-<div>
+<div class='container-fluid'>
   <label>User name:
     <input #heroName />
   </label>
@@ -13,10 +13,8 @@
 </div>
 
 <ul class="heroes">
-  <li *ngFor="let hero of heroes">
-    <a routerLink="/detail/{{hero.id}}">
+  <li *ngFor="let user of heroesusers">
       <span class="badge">{{user.id}}</span> {{user.username}}
-    </a>
     <button class="delete" title="delete hero"
       (click)="delete(hero)">x</button>
   </li>
