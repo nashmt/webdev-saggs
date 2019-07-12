@@ -20,10 +20,10 @@ export class DashboardComponent implements OnInit {
 
     private AmazonCognitoIdentity: any;
 
-    private poolData: {
+    private poolData = {
 
-        UserPoolId: string,
-        ClientId: string
+        UserPoolId: null as string,
+        ClientId: null as string
     };
 
     // The registered user
