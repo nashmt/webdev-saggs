@@ -15,8 +15,12 @@ import { InMemoryDataService }  from './in-memory-data.service';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
  // { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
- {path: 'dashboard', redirectTo: '/dashboard/myAccess', pathMatch: 'full'},
- {path: 'dashboard/myAccess', component: DashboardComponent },
+ // I commented the below line out to try to retrieve the id_token that Cognito is passing back.
+ // Right now, this redirect is erasing the token from the url-blank before the Angular can retrieve it.
+ // {path: 'dashboard', redirectTo: '/dashboard/myAccess', pathMatch: 'full'},
+ {path: 'dashboard', component: DashboardComponent},
+ // I commented out the below line for the same reason.
+ // {path: 'dashboard/myAccess', component: DashboardComponent },
  {path: 'dashboard/products', component: BootstrapRequestComponent },
  {path: 'dashboard/documentation', component: RequestFormComponent },
   { path: 'home', component: HomeComponent },
