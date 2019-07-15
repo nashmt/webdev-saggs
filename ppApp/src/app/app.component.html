@@ -12,15 +12,10 @@
   </head>
   <body>
     <div id='app-header' class='justify-content-between'>
-      <nav class="navbar navbar-dark bg-dark">
-
+      
+      <nav id='app-nav' class="navbar navbar-expand-lg navbar-dark bg-dark">
+        
           <a class="navbar-brand p-2" href="#"><img src="assets/images/saggs_logo_2.1.png" class="img-fluid" alt="Responsive image"></a>
-        <div class="p-2">
-          <a href='https://partners-softwareaggov.auth.us-east-1.amazoncognito.com/login?response_type=token&client_id=1e6q1kkegc508q4je1u9mrhr78&redirect_uri=http://localhost:4200/dashboard'><button type="button" class="btn btn-primary mx-2">Login/Register</button></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
         
           <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto p-2" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,17 +32,19 @@
                   <a class="nav-link" href="https://softwareaggov.com/solutions/" target='_blank'>Solutions</a>
               </li>
               <li class="nav-item">
-                <a class='nav-link' routerLink='/dashboard'>User View</a>
+                <a class='nav-link' routerLink='/dashboard'>User</a>
               </li> 
               <li class="nav-item no-b">
-                <a class='nav-link' routerLink='/admin'>Admin View</a>
+                <a class='nav-link' routerLink='/admin'>Admin</a>
               </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
           </div> 
+          <div class="p-2">
+              <a href='https://partners-softwareaggov.auth.us-east-1.amazoncognito.com/login?response_type=token&client_id=1e6q1kkegc508q4je1u9mrhr78&redirect_uri=http://localhost:4200/dashboard'><button type="button" class="btn btn-primary mx-2">Login/Register</button></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
         </nav>
         </div>
         
