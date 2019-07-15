@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { first } from 'rxjs/operators';
 import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 import { KJUR, b64utoutf8 } from 'jsrsasign';
 
@@ -17,7 +18,8 @@ export class DashboardComponent implements OnInit {
         private authenticationService: AuthenticationService,
         private userService: UserService,
         private productService: ProductsService,
-        private route: ActivatedRoute
+        private route: ActivatedRoute,
+        private location: Location
     ) { }
 
 
@@ -73,7 +75,7 @@ export class DashboardComponent implements OnInit {
 
         var access_token_b64 = the_url.slice(the_url.indexOf('access_token=')+13, the_url.indexOf('expires_in=')-1);
 
-        
+
         this.expires_in = the_url.slice(the_url.indexOf('expires_in=')+11, the_url.indexOf('token_type=')-1);
 
         this.token_type = the_url.slice(the_url.indexOf('token_type=')+11, the_url.length);
@@ -82,6 +84,9 @@ export class DashboardComponent implements OnInit {
         this.decoded_id_token = this.decode_JWT(id_token_b64);
 
         this.decoded_access_token = this.decode_JWT(access_token_b64);
+
+
+        this.location.replaceState("/dashboard");
 
         /*
         // assigns the values of authData
