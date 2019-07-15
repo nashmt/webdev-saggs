@@ -39,3 +39,40 @@ The server wouldn't start because "require" couldn't be found
 
 NOTE: I have yet to touch "Auth SDK for Javascript"
 
+Another Note: I have found that Identity doesn't work at all withouth Auth!
+
+    The "CognitoUserPool" method of "AmazonCognitoIdentity" returns nothing.
+
+So, I'm going to set that up now.
+
+
+So it turns out I wasn't supposed to use the sdk at all!
+
+The Cognito UI actually returns the token in the callback URL as a parameter
+
+    This paramter was just getting deleted because of some redirection that we were doing with the routing-module
+
+    I tinkered around with the routing-module, and eventually got it to stop deleting the id_token
+
+
+Then, I went to retrieve the id_token parameter from the url using a method I had found before for other parts of the website,
+
+    and it didn't work.
+
+    I eventually figured out that the method was not retrieving the paramter from the URL because, for some reason,
+
+    cognito was using a '#' instead of '?' at the beginning of the list of parameters
+
+        (I confirmed this by changing the '#' to '?', reloading the page, and it worked perfectly)
+
+
+So I decided to just get the entire callback-url, and parse it manually.
+
+    This was actually far more complicated than I expected it to be.
+
+    "ActivatedRoute.url" does indeed return the url, but not as a string, but rather as an Observable<UrlSegment[]>
+
+    I remembered from work that I had done with getting the url parameters that "ActivatedRoute" actually had a "snapshot" member
+    that gives access to the page at the moment it is called, rather than instantiating an observer to repeatedly retrieve data over time.
+
+    
