@@ -75,4 +75,41 @@ So I decided to just get the entire callback-url, and parse it manually.
     I remembered from work that I had done with getting the url parameters that "ActivatedRoute" actually had a "snapshot" member
     that gives access to the page at the moment it is called, rather than instantiating an observer to repeatedly retrieve data over time.
 
-    
+        
+The Public keys for our user pool
+Cognito generates two key pairs for each pool
+
+{"keys":[{"alg":"RS256","e":"AQAB","kid":"EW/B56jWWbsJ/19BsgJHbbgQi/6GKHG/g7MU05Wtrpc=","kty":"RSA","n":"4FeGrqy3p_7EsHGruMzekLZRJxVIzBFRqJ2Ymmn4YKPpFbdd6H_rwEU61pYCVlgjvrXGHoHLGtgcX9G0rr66AMtmcAwklQcmYYSXOAkCCKKu_W5774msP4yP8VrEywBS9OWNSN18U6ufLmpqVQHOOFUEuS6kNzWTjmRcDeeVK5la9KFp-XfYWFIW0g-gpZe6ULttHPb_K9QzzRTMfZBbBSjyAMm_7GvwEfi7j2gtpBxdTeC7QVKzDogStk9iIzitz9d3HBwLRMS1xAPk-8lIwggwlrwIoFHqgaxp8wrGbb9HyptHZaYKC5FQr8RAwxoBoL6-1GcNot9XbNI1E0KrTw","use":"sig"},{"alg":"RS256","e":"AQAB","kid":"ujuaMaKK31+yaW2wqPMFIYCHvC+fzfTplGXLqRy8Vzw=","kty":"RSA","n":"nra2jPAeeXoSSJ8Hvkut0kEbAl-Ar0mAUev5-jfTElkzeOxEXusTYydpQIygNovJPJ8Yd1qJ7vzZl3DxILIjCp5_Uob-JoL-Wy-edLVqEdDCTbJURGznaZA6aXUvz5trupbR4pmsVVZPDRcAqVlFm1pW0rXYfxlksRXJ1MZz6C3Wp_VwY6F7eXGPDYVbcQxg6tYsuPNB8iFN51m0Ez-VWwOEODvIhrdFOc58g-7C7CO6j0BJbm-6Bd4o1wMmu-TmrtS2NNVcqAfofJGxOwQRpCB24R7zGez0ZjuR7o6YiiH-Chv_TfmAGGpvWu52-lC-G4-JaLgUJJCNbq1bPYFzRQ","use":"sig"}]}
+        
+These will always be accessible at "https://cognito-idp.us-east-1.amazonaws.com/us-east-1_lDZasLc5x/.well-known/jwks.json"
+
+I also stored them more readibly in "/src/user_pool_public_keys.txt"        
+
+        
+
+
+        
+authData = {
+
+    ClientId: "1e6q1kkegc508q4je1u9mrhr78",
+    AppWebDomain: "https://partners-softwareaggov.auth.us-east-1.amazoncognito.com",
+    TokenScopesArray: [ "phone", "email", "openid", "aws.cognito.signin.user.admin", "profile" ],
+    RedirectUriSignIn: "http://localhost:4200/dashboard",
+    RedirectUriSignOut: "https://partners-softwareaggov.auth.us-east-1.amazoncognito.com",
+    UserPoolId: "us-east-1_lDZasLc5x",
+    AdvancedSecurityDataCollectionFlag: true,
+    Storage: null
+}
+        
+
+To save the json to a file, I installed the "file-system" package.
+
+    There is, however, something wrong with the newest version.
+
+    To solve it, I added
+
+        node: {
+        fs: 'empty'
+        }
+
+    to my webpack.config.js

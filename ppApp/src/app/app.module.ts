@@ -5,6 +5,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers';
 
+import { CookieService } from 'ngx-cookie-service';
+
 import { AlertComponent } from './_components';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { AppRoutingModule } from './app-routing.module';
@@ -20,10 +22,13 @@ import { PendingRequestsComponent } from './pending-requests/pending-requests.co
 import { RequestFormComponent } from './request-form/request-form.component';
 import { ActionResultComponent } from './action-result/action-result.component';
 import { AdminRequestedProductsComponent } from './admin-requested-products/admin-requested-products.component';
-import { InMemoryDataService }  from './in-memory-data.service';
+import { InMemoryDataService }  from './_services/in-memory-data.service';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { PartnerPageComponent } from './partner-page/partner-page.component';
 import { ManagePartnersComponent } from './manage-partners/manage-partners.component';
+import { CallbackComponent } from './callback/callback.component';
+import { CallbackBufferComponent } from './callback-buffer/callback-buffer.component';
+
 import { ProductsPageComponent } from './products-page/products-page.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { AdminNavigationComponent } from './admin-navigation/admin-navigation.component';
@@ -45,6 +50,8 @@ import { AdminNavigationComponent } from './admin-navigation/admin-navigation.co
     AdminRequestedProductsComponent,
     PartnerPageComponent,
     ManagePartnersComponent,
+    CallbackComponent,
+    CallbackBufferComponent,
     ProductsPageComponent,
     NavigationComponent,
     AdminNavigationComponent
@@ -63,7 +70,9 @@ import { AdminNavigationComponent } from './admin-navigation/admin-navigation.co
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
 
     // provider used to create fake backend
-    fakeBackendProvider
+    fakeBackendProvider,
+
+    CookieService
   ],
   bootstrap: [AppComponent]
 })

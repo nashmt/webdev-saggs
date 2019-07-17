@@ -1,23 +1,21 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 
-import { AuthenticationService } from './_services';
-import { User } from './_models';
+import { CookieService } from 'ngx-cookie-service';
 
 
 @Component({ selector: 'app-root', templateUrl: 'app.component.html' })
-export class AppComponent {
-    currentUser: User;
+export class AppComponent implements OnInit {
+
+    private user: string;
 
     constructor(
-        private router: Router,
-        private authenticationService: AuthenticationService
-    ) {
-        this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
-    }
 
-    logout() {
-        this.authenticationService.logout();
-        this.router.navigate(['/login']);
+        private cookieMan: CookieService
+    ) { }
+
+
+    ngOnInit() {
+
+        this.user = JSON.parse(this.cookieMan.get("user")).id_token.payload.given_name;
     }
 }
