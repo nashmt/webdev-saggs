@@ -31,6 +31,7 @@ import { CallbackBufferComponent } from './callback-buffer/callback-buffer.compo
 
 import { ProductsPageComponent } from './products-page/products-page.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { AdminNavigationComponent } from './admin-navigation/admin-navigation.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { NavigationComponent } from './navigation/navigation.component';
     CallbackComponent,
     CallbackBufferComponent,
     ProductsPageComponent,
-    NavigationComponent
+    NavigationComponent,
+    AdminNavigationComponent
   ],
   imports: [
     BrowserModule,

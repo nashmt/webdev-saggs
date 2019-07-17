@@ -1,0 +1,16 @@
+#admin-nav-col {
+    background-color: rgba(5,5,5,.7);
+    float: left;
+    height: 100%;
+    z-index: 1000;
+    color: #DFDBE5;
+    margin-left: 0;
+}
+
+#admin-nav-col a{
+    color: #DFDBE5;
+}
+
+#admin-nav-col a:hover {
+    color: #a0a0f5;
+}
