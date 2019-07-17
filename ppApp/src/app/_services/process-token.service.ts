@@ -70,7 +70,7 @@ export class ProcessTokenService {
     this._token_type = this.route.snapshot.queryParamMap.get('token_type');
 
 
-
+    
 
 
     this._decoded_id_token = this.decode_JWT(id_token_b64);

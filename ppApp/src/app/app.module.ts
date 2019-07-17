@@ -29,6 +29,8 @@ import { ManagePartnersComponent } from './manage-partners/manage-partners.compo
 import { CallbackComponent } from './callback/callback.component';
 import { CallbackBufferComponent } from './callback-buffer/callback-buffer.component';
 
+import { ProductsPageComponent } from './products-page/products-page.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +51,8 @@ import { CallbackBufferComponent } from './callback-buffer/callback-buffer.compo
     ManagePartnersComponent,
     CallbackComponent,
     CallbackBufferComponent
+    ProductsPageComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,

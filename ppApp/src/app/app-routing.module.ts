@@ -13,6 +13,7 @@ import { AdminRequestedProductsComponent } from './admin-requested-products/admi
 import { InMemoryDataService } from './_services/in-memory-data.service';
 import { CallbackComponent } from './callback/callback.component';
 import { CallbackBufferComponent } from './callback-buffer/callback-buffer.component';
+import { ProductsPageComponent } from './products-page/products-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'dashboard/products', component: BootstrapRequestComponent },
   { path: 'dashboard/documentation', component: RequestFormComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'products', component: ProductsPageComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'admin', redirectTo: '/admin/partners', pathMatch: 'full'},
