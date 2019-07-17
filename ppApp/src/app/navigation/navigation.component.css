@@ -1,3 +1,7 @@
-#app-nav {
-    border-bottom: 2px ridge #aaaaff;
+#navbarSupportedContent {
+    float: right;
+}
+
+#app-header ul{
+    text-align: right;
 }
