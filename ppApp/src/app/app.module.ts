@@ -50,7 +50,7 @@ import { NavigationComponent } from './navigation/navigation.component';
     PartnerPageComponent,
     ManagePartnersComponent,
     CallbackComponent,
-    CallbackBufferComponent
+    CallbackBufferComponent,
     ProductsPageComponent,
     NavigationComponent
   ],
