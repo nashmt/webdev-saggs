@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
-
-  constructor() { }
+  public view = '';
+  constructor() { 
+    this.view = 'partners';
+  }
 
   ngOnInit() {
   }
 
+  setView(newView) {
+    this.view=newView;
+  }
 }

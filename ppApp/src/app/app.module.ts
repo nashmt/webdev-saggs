@@ -26,6 +26,7 @@ import { PartnerPageComponent } from './partner-page/partner-page.component';
 import { ManagePartnersComponent } from './manage-partners/manage-partners.component';
 import { ProductsPageComponent } from './products-page/products-page.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { AdminNavigationComponent } from './admin-navigation/admin-navigation.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { NavigationComponent } from './navigation/navigation.component';
     PartnerPageComponent,
     ManagePartnersComponent,
     ProductsPageComponent,
-    NavigationComponent
+    NavigationComponent,
+    AdminNavigationComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AdminComponent } from '../admin/admin.component';
 import { PENDING } from '../_helpers/index';
 
 @Component({
@@ -10,10 +10,11 @@ import { PENDING } from '../_helpers/index';
 export class AdminRequestedProductsComponent implements OnInit {
 
   pending = PENDING;
-
+  admComp = new AdminComponent;
+  newView ='requests';
   constructor() { }
 
   ngOnInit() {
+    this.admComp.view=this.newView;
   }
-
 }
