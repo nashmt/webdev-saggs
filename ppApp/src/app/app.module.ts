@@ -24,6 +24,8 @@ import { InMemoryDataService }  from './in-memory-data.service';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { PartnerPageComponent } from './partner-page/partner-page.component';
 import { ManagePartnersComponent } from './manage-partners/manage-partners.component';
+import { ProductsPageComponent } from './products-page/products-page.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { ManagePartnersComponent } from './manage-partners/manage-partners.compo
     ActionResultComponent,
     AdminRequestedProductsComponent,
     PartnerPageComponent,
-    ManagePartnersComponent
+    ManagePartnersComponent,
+    ProductsPageComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,18 @@
+body {
+    background-color: black;
+}
 #app-nav {
     height: 10px;
+    background-color: rgba(0,0,0,.9);
+}
+#app-header {
+    background-color: rgba(0,0,0,.1)
+}
+footer {
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    color: slategrey;
+    font-family: sans-serif;
+    text-align: center;
 }
