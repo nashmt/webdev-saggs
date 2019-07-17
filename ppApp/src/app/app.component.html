@@ -40,7 +40,16 @@
             </ul>
           </div> 
           <div class="p-2">
-              <a href='https://partners-softwareaggov.auth.us-east-1.amazoncognito.com/login?response_type=token&client_id=1e6q1kkegc508q4je1u9mrhr78&redirect_uri=http://localhost:4200/dashboard'><button type="button" class="btn btn-primary mx-2">Login/Register</button></a>
+              <a href='https://partners-softwareaggov.auth.us-east-1.amazoncognito.com/login?response_type=token&client_id=1e6q1kkegc508q4je1u9mrhr78&redirect_uri=http://localhost:4200/callback'>
+                <button type="button" class="btn btn-primary mx-2">
+                  <div *ngIf="user; else Login">
+                    {{user}}
+                  </div>
+                  <ng-template #Login>
+                    Login/Register
+                  </ng-template>
+                </button>
+              </a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
