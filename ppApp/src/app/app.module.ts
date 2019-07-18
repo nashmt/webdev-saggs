@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule, FormsModule }    from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -6,7 +7,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { fakeBackendProvider } from './_helpers';
 
 import { CookieService } from 'ngx-cookie-service';
-
+import { MatSidenavModule } from '@angular/material/sidenav'; 
 import { AlertComponent } from './_components';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { AppRoutingModule } from './app-routing.module';
@@ -54,14 +55,17 @@ import { AdminNavigationComponent } from './admin-navigation/admin-navigation.co
     CallbackBufferComponent,
     ProductsPageComponent,
     NavigationComponent,
-    AdminNavigationComponent
+    AdminNavigationComponent,
+
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
+    MatSidenavModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation: false})
 
   ],

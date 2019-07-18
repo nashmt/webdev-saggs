@@ -2,11 +2,6 @@
   <app-navigation></app-navigation>
   <div class="container-fluid">
     <app-admin-navigation></app-admin-navigation>
-    <div class='col-8' id='admin-content' [ngSwitch]='admin-switch'>
-      <app-manage-partners *ngSwitchCase='partners'></app-manage-partners>
-      <app-bootstrap-request *ngSwitchCase='requests'></app-bootstrap-request>
-      <app-manage-partners *ngSwitchDefault></app-manage-partners>
-    </div>  
   </div>
 </section>
 

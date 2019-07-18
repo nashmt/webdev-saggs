@@ -9,7 +9,10 @@ import * as AWS from 'aws-sdk/global';
 import { getMaxListeners } from 'cluster';
 
 
-@Component({ templateUrl: 'dashboard.component.html' })
+@Component({ 
+    templateUrl: 'dashboard.component.html',
+    styleUrls: ['./dashboard.component.css']
+})
 export class DashboardComponent implements OnInit {
 
     private token_sets: any[] = new Array();
