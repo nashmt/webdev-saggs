@@ -70,7 +70,7 @@ export class ProcessTokenService {
     this._token_type = this.route.snapshot.queryParamMap.get('token_type');
 
 
-    
+
 
 
     this._decoded_id_token = this.decode_JWT(id_token_b64);
@@ -79,12 +79,6 @@ export class ProcessTokenService {
 
     // We have now decoded and stored the tokens in local variables.
 
-    
-    this._database.push_token_set({
-
-      id_token: this._decoded_id_token,
-      access_token: this._decoded_access_token
-    });
 
 
     this.cookieMan.set( "user", JSON.stringify({
