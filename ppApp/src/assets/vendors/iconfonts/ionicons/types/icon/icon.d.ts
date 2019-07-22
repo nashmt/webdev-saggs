@@ -1,4 +1,5 @@
 import '../stencil.core';
+import { JSXElements } from '../stencil.core';
 export declare class Icon {
     private io?;
     el: HTMLElement;
@@ -74,5 +75,5 @@ export declare class Icon {
             'ion-color': boolean;
         };
     };
-    render(): JSX.Element;
+    render(): JSXElements.HTMLAttributes;
 }
