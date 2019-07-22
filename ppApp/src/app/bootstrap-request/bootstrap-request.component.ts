@@ -8,13 +8,13 @@ import { PRODUCTS } from '../_helpers/index';
   styleUrls: ['./bootstrap-request.component.css']
 })
 export class BootstrapRequestComponent implements OnInit {
-  admComp = new AdminComponent;
+
   products = PRODUCTS;
-  newView ='requests';
+
   constructor() { }
 
   ngOnInit() {
-    this.admComp.view=this.newView;
+
   }
 
 }
