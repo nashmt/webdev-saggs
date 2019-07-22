@@ -15,9 +15,6 @@ import { getMaxListeners } from 'cluster';
 })
 export class DashboardComponent implements OnInit {
 
-    private token_sets: any[] = new Array();
-
-
     users = [];
     products = [];
 
@@ -25,10 +22,6 @@ export class DashboardComponent implements OnInit {
     constructor(
         private userService: UserService
     ) { }
-
-
-    
-
 
 
 
