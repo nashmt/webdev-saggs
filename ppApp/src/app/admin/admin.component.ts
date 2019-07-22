@@ -6,12 +6,6 @@ import { ViewEncapsulation } from '@angular/compiler/src/core';
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.css']
 })
-export class AdminComponent implements OnInit {
-
-  constructor() { 
-  }
-
-  ngOnInit() {
-  }
+export class AdminComponent {
 
 }

@@ -9,12 +9,12 @@ const routes: Routes =[
   {
     path: 'admin',
     redirectTo: 'admin/dashboard',
-    pathMatch: 'full',
+    pathMatch: 'full'
   }, {
     path: 'admin',
     component: AdminLayoutComponent,
     children: [{
-      path: '',
+      path: 'admin',
       loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'
     }]
   }
@@ -25,7 +25,7 @@ const routes: Routes =[
     CommonModule,
     BrowserModule,
     RouterModule.forRoot(routes,{
-       useHash: true
+       useHash: false
     })
   ],
   exports: [

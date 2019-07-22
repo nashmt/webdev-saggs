@@ -1,0 +1,33 @@
+{
+    "products": [
+        {
+        "prodId": "01",
+        "title": "Integration",
+        "description": "Need to integrate systems on-premises, in the cloud or in a hybrid combination?",
+        "imgUrl":"",
+        "docUrl":"https://www.softwareag.com/us/products/webmethods_integration/default.html",
+        "accessUrl":""
+        }, {
+        "prodId": "02",
+        "title":"Alfabet",
+        "description": "Alfabet description",
+        "imgUrl":"assets/images/alfabet.png",
+        "docUrl":"https://softwareaggov.com/products/products-alfabet/",
+        "accessUrl":""
+        },{
+        "prodId": "03",
+        "title":"ARIS",
+        "description":"Software AG's ARIS Business Modeling Platform is ideal for organizations that want to document, analyze, standardize and improve their processes.",
+        "imgUrl":"",
+        "docUrl":"",
+        "accessUrl":""
+        }, {
+        "prodId": "04",
+        "title": "API Management",
+        "description":"Using webMethods.io API, you can securely manage and expose your APIs to the world.",
+        "imgUrl":"",
+        "docUrl":"https://www.softwareag.com/us/products/api/default.html",
+        "accessUrl":""
+        }
+    ]   
+}

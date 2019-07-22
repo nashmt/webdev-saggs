@@ -8,7 +8,7 @@ let users = JSON.parse(localStorage.getItem('users')) || [];
 let products = JSON.parse(localStorage.getItem('products')) || [];
 
 @Injectable()
-export class FakeBackendInterceptor implements HttpInterceptor {
+/*export*/ class FakeBackendInterceptor implements HttpInterceptor {
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         const { url, method, headers, body } = request;
 

@@ -1,30 +1,45 @@
 <div id='app-header'>
-  <nav id='app-nav' class="navbar navbar-expand-lg navbar-dark">
-    <div id='img'>
-      <a class="navbar-brand" href="#"><img src="assets/images/saggs_logo_2.1.png" class="img-fluid" alt="Responsive image"></a>
-    </div>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul id='nav-list' class="navbar-nav mr-auto d-flex justify-content-end " data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <li class="nav-item p-2">
-          <a class="nav-link" routerLink='/home'>Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item p-2">
-          <a class="nav-link" routerLink='/products'>Products</a>
-        </li>
-        <li class="nav-item p-2">
-          <a class="nav-link" href="https://softwareaggov.com/solutions/" target='_blank'>Solutions</a>
-        </li>
-        <li class="nav-item p-2">
-          <a class='nav-link' routerLink='/dashboard'>User</a>
-        </li> 
-        <li id='admin' class="nav-item p-2">
-          <a class='nav-link' routerLink='/admin'>Admin</a>
-        </li>
-      </ul> 
-      <a href='https://partners-softwareaggov.auth.us-east-1.amazoncognito.com/login?response_type=token&client_id=1e6q1kkegc508q4je1u9mrhr78&redirect_uri=http://localhost:4200/callback'><button type="button" class="btn btn-primary mx-2">Login/Register</button></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-    </div>
-  </nav>
-</div>
+      
+        <nav id='app-nav' class="navbar navbar-expand-lg navbar-dark">
+          <div id='img'>
+            <a class="navbar-brand" href="#"><img src="assets/images/saggs_logo_2.1.png" class="img-fluid" alt="Responsive image"></a>
+          </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul id='nav-list' class="navbar-nav mr-auto d-flex justify-content-end " data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <li class="nav-item p-2">
+                  <a class="nav-link" routerLink='/home'>Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item p-2">
+                  <a class="nav-link" routerLink='/products'>Products</a>
+                </li>
+                <li class="nav-item p-2">
+                    <a class="nav-link" href="https://softwareaggov.com/solutions/" target='_blank'>Solutions</a>
+                </li>
+                <li class="nav-item p-2">
+                  <a class='nav-link' routerLink='/dashboard'>User</a>
+                </li> 
+                <li id='admin' class="nav-item p-2">
+                  <a class='nav-link' routerLink='/admin'>Admin</a>
+                </li>
+              </ul> 
+                <a href='https://partnerportal-softwareaggov.auth.us-east-1.amazoncognito.com/login?response_type=token&client_id=dla8vubdgh3u8umjlvldsj33p&redirect_uri=http://localhost:4200/callback'>
+                  <button type="button" class="btn btn-primary mx-2">
+                    
+                    <div *ngIf="user; then User else register"></div>
+                    
+                    <ng-template #User>
+                      {{user}}
+                    </ng-template>
+                  
+                    <ng-template #register> 
+                      Login/Register
+                    </ng-template>
+                    
+                  </button>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              </div>
+          </nav>
+          </div>
