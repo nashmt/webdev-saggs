@@ -13,7 +13,7 @@ import { map } from 'rxjs/operators';
 export class CallbackBufferComponent implements OnInit {
 
 
-  // Note: just declaring ProcessTokenService here runs the "get_tokens()" method
+  // Note: just instantiating ProcessTokenService here retrieves the token and stores it in a cookie
   constructor(
 
     private processToken: ProcessTokenService

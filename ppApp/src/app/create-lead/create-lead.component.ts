@@ -14,7 +14,6 @@ import { CookieService } from 'ngx-cookie-service';
 /*
   Cookie Structure:
   {
-    address:
     at_hash:
     aud:
     auth_time:
@@ -23,16 +22,14 @@ import { CookieService } from 'ngx-cookie-service';
     email_verified:
     event_id:
     exp:
+    family_name:
     given_name:
     iat:
     iss:
-    middle_name:
-    name:
     phone_number:
     phone_number_verified:
     sub:
     token_use:
-    website:
   }
 
   Lead Structure:
@@ -75,54 +72,34 @@ export class CreateLeadComponent implements OnInit {
     
     
 
-    var the_lead = {
-      "FirstName":"Rafael",
-      "LastName":"Taylor",
-      "Company":"SAGGS",
-      "LeadSource":"Seminar",
-      "Status":"Working",
-      "Industry":"Finance",
-      "Rating":"5"
-    };
-
+    // The data stored in the cookie
     var the_token_set = JSON.parse(this.cookieMan.get("user"));
-
-    
-    this.content = the_token_set.id_token.payload;
-
-    console.log(this.content);
     
     
-    var live_lead = {
+    var the_lead = {
       "FirstName": the_token_set.id_token.payload.given_name,
-      "LastName": the_token_set.id_token.payload.given_name,
-      "Company": the_token_set.id_token.payload.website,
+      "LastName": the_token_set.id_token.payload.family_name,
+      "Company": the_token_set.id_token.payload.email,
+      "Email": the_token_set.id_token.payload.email,
       "LeadSource": "Partner Portal",
       "Status": "Live",
       "Industry": "Cyber-Crypto",
       "Rating": "9.9"
     };
     
-
-    /*
-    this.http.get("https://api.github.com/users/koushikkothagal").subscribe(
-      (json) => this.content = json,
-      (error) => console.log(error)
-      );
-    */
     
-      
-    // Works
-
+    // the leads currently in Salesforce  
     var the_leads: any;
 
     // Is this a new lead?
     var new_lead: boolean = true;
 
     // The Observable to add the new lead if it doesn't exist already
-    var post_obs = this.http.post("https://cors-anywhere.herokuapp.com/http://54.211.12.84:5555/restv2/SFDev.sfrest:createLeadRS/createLeadRS", live_lead, {headers: the_headers});
+    var post_obs = this.http.post("https://cors-anywhere.herokuapp.com/http://54.211.12.84:5555/restv2/SFDev.sfrest:createLeadRS/createLeadRS", the_lead, {headers: the_headers});
     
     
+    // Gets the leads currently in Salesforce,
+    // and adds the new lead if it isn't already there.
     this.http.get('https://cors-anywhere.herokuapp.com/http://54.211.12.84:5555/restv2/SFDev.sfrest:getSFLeads/getLeads', {headers: the_headers}).subscribe(
 
       (data) => {
@@ -130,14 +107,22 @@ export class CreateLeadComponent implements OnInit {
         console.log(the_leads.results);// .results[0].FirstName);
         
 
+        // Prepares to redirect to the dashboard once the asynchronous operations are complete.
+        var the_url: string = window.location.href;
+
+        // takes the token out of the url
+        the_url = the_url.split('?')[0];
+    
+        // will redirect to the dashboard
+        the_url = the_url.replace("create-lead", "dashboard");
+
 
         for( var i=0; i<the_leads.results.length; i++ ) {
 
-          if( the_token_set.id_token.payload.given_name == the_leads.results[i].FirstName ) {
+          if( the_token_set.id_token.payload.email == the_leads.results[i].Email ) {
 
             new_lead = false;
             console.log("duplicate lead!");
-            console.log( "new_lead set to: " + new_lead );
           }
         }
 
@@ -147,33 +132,19 @@ export class CreateLeadComponent implements OnInit {
             (data) => {
               console.log("lead created!");
               console.log(data);
+
+              // Redirects to dashboard once lead is created
+              window.location.href = the_url;
             }
           );
         }
+        else {
+
+          // Redirects to dashboard once we are certain we don't need to create a new lead
+          window.location.href = the_url;
+        }
       }
     );
-    
-    
-
-    
-    
-    
-
-
-    // Done.  Redirect to dashboard
-
-
-    var the_url: string = window.location.href;
-
-    // takes the token out of the url
-    the_url = the_url.split('?')[0];
-
-    // will redirect to the dashboard
-    the_url = the_url.replace("create-lead", "dashboard");
-
-    // window.location.href = the_url;
   }
-
-
 }
 

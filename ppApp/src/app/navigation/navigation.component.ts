@@ -30,7 +30,7 @@ export class NavigationComponent implements OnInit {
     else {
 
       this.location.replaceState('/home');
-      //window.location.href = "https://partners-softwareaggov.auth.us-east-1.amazoncognito.com/login?response_type=token&client_id=1e6q1kkegc508q4je1u9mrhr78&redirect_uri=http://localhost:4200/callback";
+      // window.location.href = "https://partners-softwareaggov.auth.us-east-1.amazoncognito.com/login?response_type=token&client_id=1e6q1kkegc508q4je1u9mrhr78&redirect_uri=http://localhost:4200/callback";
     }
   }
 
