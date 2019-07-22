@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router';
 import { AdminRoutingModule } from './admin.routing';
 import { ComponentsModule } from './components/components.module';
 
-import { AppComponent } from './app.component';
+import { AdminComponent } from './admin.component';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
@@ -31,11 +31,11 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
     AdminRoutingModule
   ],
   declarations: [
-    AppComponent,
+    AdminComponent,
     AdminLayoutComponent,
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AdminComponent]
 })
-export class AppModule { }
+export class AdminModule { }

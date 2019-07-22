@@ -15,6 +15,5 @@ export class AdminRequestedProductsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.admComp.view=this.newView;
   }
 }

@@ -6,16 +6,11 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
-  public view = '';
-  public layout = AdminLayoutComponent;
+
   constructor() { 
-    this.view = 'partners';
   }
 
   ngOnInit() {
   }
 
-  setView(newView) {
-    this.view=newView;
-  }
 }
