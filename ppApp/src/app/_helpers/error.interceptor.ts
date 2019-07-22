@@ -6,7 +6,7 @@ import { catchError } from 'rxjs/operators';
 import { AuthenticationService } from '../_services/index';
 
 @Injectable()
-export class ErrorInterceptor implements HttpInterceptor {
+/*export*/ class ErrorInterceptor implements HttpInterceptor {
     constructor(private authenticationService: AuthenticationService) {}
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {

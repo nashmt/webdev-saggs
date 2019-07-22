@@ -88,8 +88,6 @@ export class ProcessTokenService {
     );
     
 
-    this.location.replaceState("/dashboard");
-
 
 
     // This is how I was doing it before - maybe I'll have to do it this way again!

@@ -7,8 +7,8 @@ import { fakeBackendProvider } from './_helpers';
 
 import { CookieService } from 'ngx-cookie-service';
 
-import { AlertComponent } from './_components';
-import { JwtInterceptor, ErrorInterceptor } from './_helpers';
+// import { AlertComponent } from './_components';
+// import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -23,7 +23,7 @@ import { RequestFormComponent } from './request-form/request-form.component';
 import { ActionResultComponent } from './action-result/action-result.component';
 import { AdminRequestedProductsComponent } from './admin-requested-products/admin-requested-products.component';
 import { InMemoryDataService }  from './_services/in-memory-data.service';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+// import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { PartnerPageComponent } from './partner-page/partner-page.component';
 import { ManagePartnersComponent } from './manage-partners/manage-partners.component';
 import { CallbackComponent } from './callback/callback.component';
@@ -32,13 +32,15 @@ import { CallbackBufferComponent } from './callback-buffer/callback-buffer.compo
 import { ProductsPageComponent } from './products-page/products-page.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { AdminNavigationComponent } from './admin-navigation/admin-navigation.component';
+import { CreateLeadComponent } from './create-lead/create-lead.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    AlertComponent,
+    // AlertComponent,
     RegisterComponent,
     DashboardComponent,
     AdminComponent,
@@ -54,20 +56,21 @@ import { AdminNavigationComponent } from './admin-navigation/admin-navigation.co
     CallbackBufferComponent,
     ProductsPageComponent,
     NavigationComponent,
-    AdminNavigationComponent
+    AdminNavigationComponent,
+    CreateLeadComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule,
-    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation: false})
+    FormsModule
+    // HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation: false})
 
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    // { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    // { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
 
     // provider used to create fake backend
     fakeBackendProvider,

@@ -14,6 +14,7 @@ import { InMemoryDataService } from './_services/in-memory-data.service';
 import { CallbackComponent } from './callback/callback.component';
 import { CallbackBufferComponent } from './callback-buffer/callback-buffer.component';
 import { ProductsPageComponent } from './products-page/products-page.component';
+import { CreateLeadComponent } from './create-lead/create-lead.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -23,6 +24,7 @@ const routes: Routes = [
   // {path: 'dashboard', redirectTo: '/dashboard/myAccess', pathMatch: 'full'},
   { path: 'callback', component: CallbackComponent},
   { path: 'callback-buffer', component: CallbackBufferComponent },
+  { path: 'create-lead', component: CreateLeadComponent },
   { path: 'dashboard', component: DashboardComponent},
   // I commented out the below line for the same reason.
   // {path: 'dashboard/myAccess', component: DashboardComponent },
@@ -34,7 +36,8 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'admin', redirectTo: '/admin/partners', pathMatch: 'full'},
   { path: 'admin/partners', component: AdminComponent },
-  { path: 'admin/requests', component: AdminRequestedProductsComponent }
+  { path: 'admin/requests', component: AdminRequestedProductsComponent },
+  { path: '**', component: HomeComponent }
 
 ];
 

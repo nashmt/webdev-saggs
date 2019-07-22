@@ -113,3 +113,49 @@ To save the json to a file, I installed the "file-system" package.
         }
 
     to my webpack.config.js
+
+
+I decided to store the tokens that cognito passes back in a cookie.
+
+    The structure of the token can be found at: "https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-using-tokens-with-identity-providers.html"
+
+
+Our current flow for the login is: Cognito -> callback -> callback-buffer -> create-lead -> dashboard
+
+
+I ran into a host of problems trying to make REST calls from our "create-leads" component
+
+    I got a strange error: "cannot read property 'message' of undefined"
+
+    I searched and searched online and nobody appeared to have had this problem before
+
+    I checked my syntax over and over to make sure I had made no mistakes, and still couldn't get it to work.
+
+    So, I spun up an entirely new Angular-project, and tried making the call from there with the exact same code.
+
+        And it worked!
+
+    So, I determined that it had to be some file that we were importing globally that was causing the error
+    
+        We had installed a couple of interceptors, and I didn't understand well at all how they worked, so I commented both of them out completely.
+
+        The error finally changed, but it still didn't work.
+
+        I searched online for this new error, and still nothing.
+
+        So, I went slowly and carefully through the list of modules we had imported in "app.module.ts"
+
+            I commented out this one: "HttpClientInMemoryWebApiModule"
+
+        And finally the REST call worked.
+
+
+Now, I tried making the REST call to the server
+
+    I tried the "getLeads" API
+
+    I didn't work and threw the error: "blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."
+
+        I still don't fully understand what CORS is, but by appending "https://cors-anywhere.herokuapp.com/" to the beginning of the URL,
+
+            I got it working.
