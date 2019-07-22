@@ -119,7 +119,9 @@ export class CreateLeadComponent implements OnInit {
     // Is this a new lead?
     var new_lead: boolean = true;
 
+    // The Observable to add the new lead if it doesn't exist already
     var post_obs = this.http.post("https://cors-anywhere.herokuapp.com/http://54.211.12.84:5555/restv2/SFDev.sfrest:createLeadRS/createLeadRS", live_lead, {headers: the_headers});
+    
     
     this.http.get('https://cors-anywhere.herokuapp.com/http://54.211.12.84:5555/restv2/SFDev.sfrest:getSFLeads/getLeads', {headers: the_headers}).subscribe(
 

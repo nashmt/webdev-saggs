@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-navigation.component.css']
 })
 export class AdminNavigationComponent implements OnInit {
-
-  constructor() { }
+  opened: boolean;
+  view: string;
+  adminView: string;
 
   ngOnInit() {
+    this.opened=true;
+    this.view='partners';
+    this.adminView='partners';
   }
 
+  setRequestView() {
+    this.view='requests';
+    this.adminView='requests';
+  }
 }

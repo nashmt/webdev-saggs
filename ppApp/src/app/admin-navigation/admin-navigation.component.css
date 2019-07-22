@@ -1,10 +1,10 @@
 #admin-nav-col {
-    background-color: rgba(5,5,5,.7);
     float: left;
     height: 100%;
     z-index: 1000;
     color: #DFDBE5;
     margin-left: 0;
+    border-right: 2px groove slateblue;
 }
 
 #admin-nav-col a{
@@ -14,3 +14,27 @@
 #admin-nav-col a:hover {
     color: #a0a0f5;
 }
+
+.app-sidenav {
+    height: 500px;
+    margin-left: 0;
+    background-color: rgba(5,5,5,.7);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 2px groove black;
+}
+
+button {
+    background: none;
+    color: #DFDBE5;
+    border: none;
+}
+
+#toggle {
+    left: 0;
+    margin-left: 0;
+}
+  

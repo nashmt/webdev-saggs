@@ -34,7 +34,7 @@ const routes: Routes = [
   { path: 'products', component: ProductsPageComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'admin', redirectTo: '/admin/partners', pathMatch: 'full'},
+  { path: 'admin', component: AdminComponent },
   { path: 'admin/partners', component: AdminComponent },
   { path: 'admin/requests', component: AdminRequestedProductsComponent },
   { path: '**', component: HomeComponent }
