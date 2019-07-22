@@ -33,8 +33,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'admin', component: AdminComponent },
-  { path: 'admin/partners', component: AdminComponent },
-  { path: 'admin/requests', component: AdminRequestedProductsComponent }
+//  { path: 'admin/partners', component: AdminComponent },
+//  { path: 'admin/requests', component: AdminRequestedProductsComponent }
 
 ];
 
