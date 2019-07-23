@@ -20,7 +20,7 @@ export class DashboardComponent implements OnInit {
 
 
     constructor(
-        private userService: UserService
+        // private userService: UserService
     ) { }
 
 
@@ -29,6 +29,7 @@ export class DashboardComponent implements OnInit {
 
     }
 
+    /*
     deleteUser(id: number) {
         this.userService.delete(id)
             .pipe(first())
@@ -40,6 +41,6 @@ export class DashboardComponent implements OnInit {
             .pipe(first())
             .subscribe(users => this.users = users);
     }
-
+    */
 
 }

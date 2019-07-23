@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AdminComponent } from '../admin/admin.component';
+// import { AdminComponent } from '../admin/admin.component';
 import { PRODUCTS } from '../_helpers/index';
 
 @Component({
