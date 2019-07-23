@@ -34,11 +34,13 @@ const routes: Routes = [
   { path: 'products', component: ProductsPageComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: '/admin', redirectTo: 'admin/dashboard', pathMatch: 'full'},
-  { path: '/admin', component: AdminLayoutComponent, children: [{
-      path: '/admin',
+  { path: 'admin', loadChildren: () => import('./admin/admin.module').then(mod => mod.AdminModule)},
+  
+ /*  { path: 'admin', redirectTo: 'admin/dashboard', pathMatch: 'full'},
+  { path: 'admin', component: AdminLayoutComponent, children: [{
+      path: 'admin',
       loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'}]
-    },
+    }, */
   // { path: 'admin', component: AdminComponent },
   // { path: 'admin/partners', component: AdminComponent },
   // { path: 'admin/requests', component: AdminRequestedProductsComponent },
