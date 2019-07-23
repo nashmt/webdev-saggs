@@ -32,7 +32,7 @@ import {
     MatTooltipModule,
   ],
   declarations: [
-    DashboardComponent,
+    //DashboardComponent,
     UserProfileComponent,
     TableListComponent,
     IconsComponent,

@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule, FormsModule }    from '@angular/forms';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS, } from '@angular/common/http';
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers';
 
@@ -17,7 +17,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { AdminComponent } from './admin/admin.component';
+// import { AdminComponent } from './admin/admin.component';
 import { AccessProductsComponent } from './access-products/access-products.component';
 import { BootstrapRequestComponent } from './bootstrap-request/bootstrap-request.component';
 import { PendingRequestsComponent } from './pending-requests/pending-requests.component';
@@ -35,9 +35,10 @@ import { ProductsPageComponent } from './products-page/products-page.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { AdminNavigationComponent } from './admin-navigation/admin-navigation.component';
 import { CreateLeadComponent } from './create-lead/create-lead.component';
-
-// import { AdminLayoutComponent } from './admin/layouts/admin-layout/admin-layout.component';
+import { AdminLayoutModule } from './admin/layouts/admin-layout/admin-layout.module';
+import { AdminLayoutComponent } from './admin/layouts/admin-layout/admin-layout.component';
 import { AdminModule } from './admin/admin.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +47,7 @@ import { AdminModule } from './admin/admin.module';
     // AlertComponent,
     RegisterComponent,
     DashboardComponent,
-   // AdminComponent,
+    //AdminComponent,
     AccessProductsComponent,
     BootstrapRequestComponent,
     PendingRequestsComponent,
@@ -60,7 +61,8 @@ import { AdminModule } from './admin/admin.module';
     ProductsPageComponent,
     NavigationComponent,
     AdminNavigationComponent,
-    CreateLeadComponent
+    CreateLeadComponent,
+    AdminLayoutComponent
   
   ],
   imports: [
@@ -71,7 +73,8 @@ import { AdminModule } from './admin/admin.module';
     HttpClientModule,
     FormsModule,
     MatSidenavModule,
-    AdminModule
+    AdminModule,
+    AdminLayoutModule
     // HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation: false})
 
   ],

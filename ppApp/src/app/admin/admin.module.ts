@@ -18,7 +18,7 @@ import { IconsComponent } from './icons/icons.component';
 
 import { NotificationsComponent } from './notifications/notifications.component';
 
-import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+//import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 
 @NgModule({
   imports: [
@@ -32,8 +32,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
   ],
   declarations: [
     AdminComponent,
-    AdminLayoutComponent,
-    DashboardComponent
+    //AdminLayoutComponent,
 
   ],
   providers: [],

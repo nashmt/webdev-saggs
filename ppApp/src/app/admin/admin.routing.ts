@@ -8,8 +8,9 @@ import { DashboardComponent } from '../dashboard';
 
 const routes: Routes =[
 
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full'}, 
-  { path: '', component: AdminLayoutComponent, children: [{ path: 'admin', loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'}]}
+  { path: 'admin', redirectTo: 'dashboard', pathMatch: 'full'},
+  { path: 'admin', loadChildren: () => import('./admin.module').then(mod => mod.AdminModule)} 
+  //{ path: '', component: AdminLayoutComponent, children: [{ path: 'admin', loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'}]}
   // {
   //   path: 'admin',
   //   redirectTo: 'admin/dashboard',
@@ -28,7 +29,7 @@ const routes: Routes =[
   imports: [
     CommonModule,
     BrowserModule,
-    RouterModule.forChild(routes)
+    RouterModule.forRoot(routes)
   ],
   exports: [RouterModule
   ],
