@@ -33,6 +33,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
   declarations: [
     AdminComponent,
     AdminLayoutComponent,
+    DashboardComponent
 
   ],
   providers: [],
