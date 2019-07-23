@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { ISHTTPService } from '../_services/ishttp.service';
 
 import { CookieService } from 'ngx-cookie-service';
 
@@ -58,17 +58,11 @@ export class CreateLeadComponent implements OnInit {
 
   constructor(
 
-    private http: HttpClient,
+    private http: ISHTTPService,
     private cookieMan: CookieService
   ) { }
 
   ngOnInit() {
-
-    
-    var the_headers = new HttpHeaders();
-
-    the_headers.append("Authorization", "Basic " +  btoa("Administrator:manage"));
-    the_headers.append('Content-Type', 'application/json');
     
     
 
@@ -95,12 +89,12 @@ export class CreateLeadComponent implements OnInit {
     var new_lead: boolean = true;
 
     // The Observable to add the new lead if it doesn't exist already
-    var post_obs = this.http.post("https://cors-anywhere.herokuapp.com/http://54.211.12.84:5555/restv2/SFDev.sfrest:createLeadRS/createLeadRS", the_lead, {headers: the_headers});
+    var post_obs = this.http.post_lead(the_lead);
     
     
     // Gets the leads currently in Salesforce,
     // and adds the new lead if it isn't already there.
-    this.http.get('https://cors-anywhere.herokuapp.com/http://54.211.12.84:5555/restv2/SFDev.sfrest:getSFLeads/getLeads', {headers: the_headers}).subscribe(
+    this.http.get_leads().subscribe(
 
       (data) => {
         the_leads = data;

@@ -10,7 +10,7 @@ import { ComponentsModule } from './components/components.module';
 
 import { AdminComponent } from './admin.component';
 
-import { DashboardComponent } from './dashboard/dashboard.component';
+// import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { TableListComponent } from './table-list/table-list.component';
 
@@ -31,8 +31,9 @@ import { NotificationsComponent } from './notifications/notifications.component'
     AdminRoutingModule
   ],
   declarations: [
-    AdminComponent,
-    //AdminLayoutComponent,
+    // AdminComponent,
+    // AdminLayoutComponent,
+    // DashboardComponent
 
   ],
   providers: [],
