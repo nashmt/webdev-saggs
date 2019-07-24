@@ -17,7 +17,6 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { AdminComponent } from './.admin/admin.component';
 import { AccessProductsComponent } from './access-products/access-products.component';
 import { BootstrapRequestComponent } from './bootstrap-request/bootstrap-request.component';
 import { PendingRequestsComponent } from './pending-requests/pending-requests.component';
@@ -39,7 +38,7 @@ import { CreateLeadComponent } from './create-lead/create-lead.component';
 // import { AdminLayoutComponent } from './.admin/layouts/admin-layout/admin-layout.component';
 import { AdminModule } from './admin/admin.module';
 
-import { ComponentsModule } from './.admin/components/components.module';
+import { ComponentsModule } from './admin/components/components.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +47,6 @@ import { ComponentsModule } from './.admin/components/components.module';
     // AlertComponent,
     RegisterComponent,
     DashboardComponent,
-    AdminComponent,
     // AdminLayoutComponent,
     AccessProductsComponent,
     BootstrapRequestComponent,
