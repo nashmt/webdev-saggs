@@ -4,7 +4,6 @@ import { HomeComponent }  from './home/home.component';
 import { LoginComponent } from './login';
 import { DashboardComponent } from './dashboard';
 import { RegisterComponent } from './register';
-import { AdminComponent }  from './.admin/admin.component';
 import { BootstrapRequestComponent } from './bootstrap-request/bootstrap-request.component';
 import { PendingRequestsComponent } from './pending-requests/pending-requests.component';
 import { RequestFormComponent } from './request-form/request-form.component';
@@ -15,7 +14,6 @@ import { CallbackComponent } from './callback/callback.component';
 import { CallbackBufferComponent } from './callback-buffer/callback-buffer.component';
 import { ProductsPageComponent } from './products-page/products-page.component';
 import { CreateLeadComponent } from './create-lead/create-lead.component';
-import { AdminLayoutComponent } from './.admin/layouts/admin-layout/admin-layout.component';
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   // { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
@@ -41,8 +39,9 @@ const routes: Routes = [
       loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'}]
     }, */
 
-    
+
   { path: 'admin', loadChildren: () => import('./admin/admin.module').then(mod => mod.AdminModule) },
+
   // { path: 'admin/partners', component: AdminComponent },
   // { path: 'admin/requests', component: AdminRequestedProductsComponent },
   { path: '**', component: HomeComponent }
