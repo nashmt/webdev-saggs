@@ -40,8 +40,9 @@ const routes: Routes = [
       path: 'admin',
       loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'}]
     }, */
-  { path: 'admin', component: AdminComponent },
-  { path: 'admin/layout', component: AdminLayoutComponent },
+
+    
+  { path: 'admin', loadChildren: () => import('./admin/admin.module').then(mod => mod.AdminModule) },
   // { path: 'admin/partners', component: AdminComponent },
   // { path: 'admin/requests', component: AdminRequestedProductsComponent },
   { path: '**', component: HomeComponent }

@@ -36,8 +36,8 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { AdminNavigationComponent } from './admin-navigation/admin-navigation.component';
 import { CreateLeadComponent } from './create-lead/create-lead.component';
 
-import { AdminLayoutComponent } from './.admin/layouts/admin-layout/admin-layout.component';
-import { AdminModule } from './.admin/admin.module';
+// import { AdminLayoutComponent } from './.admin/layouts/admin-layout/admin-layout.component';
+import { AdminModule } from './admin/admin.module';
 
 import { ComponentsModule } from './.admin/components/components.module';
 @NgModule({
@@ -49,7 +49,7 @@ import { ComponentsModule } from './.admin/components/components.module';
     RegisterComponent,
     DashboardComponent,
     AdminComponent,
-    AdminLayoutComponent,
+    // AdminLayoutComponent,
     AccessProductsComponent,
     BootstrapRequestComponent,
     PendingRequestsComponent,
