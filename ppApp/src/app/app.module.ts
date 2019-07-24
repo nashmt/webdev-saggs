@@ -37,7 +37,6 @@ import { CreateLeadComponent } from './create-lead/create-lead.component';
 
 // import { AdminLayoutComponent } from './.admin/layouts/admin-layout/admin-layout.component';
 import { AdminModule } from './admin/admin.module';
-
 import { ComponentsModule } from './admin/components/components.module';
 @NgModule({
   declarations: [
