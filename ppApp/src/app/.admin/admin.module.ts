@@ -31,7 +31,7 @@ import { NotificationsComponent } from './notifications/notifications.component'
     AdminRoutingModule
   ],
   declarations: [
-    // AdminComponent,
+    //AdminComponent,
     // AdminLayoutComponent,
     // DashboardComponent
 
