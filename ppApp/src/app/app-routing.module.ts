@@ -14,7 +14,10 @@ import { CallbackComponent } from './callback/callback.component';
 import { CallbackBufferComponent } from './callback-buffer/callback-buffer.component';
 import { ProductsPageComponent } from './products-page/products-page.component';
 import { CreateLeadComponent } from './create-lead/create-lead.component';
+<<<<<<< HEAD
 
+=======
+>>>>>>> fc780daf2b3810a91c357ecbf8beabd8ea333234
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   // { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
@@ -40,8 +43,9 @@ const routes: Routes = [
       loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'}]
     }, */
 
-    
+
   { path: 'admin', loadChildren: () => import('./admin/admin.module').then(mod => mod.AdminModule) },
+
   // { path: 'admin/partners', component: AdminComponent },
   // { path: 'admin/requests', component: AdminRequestedProductsComponent },
   { path: '**', component: HomeComponent }

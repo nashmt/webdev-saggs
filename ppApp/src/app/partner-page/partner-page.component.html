@@ -1,1 +1,16 @@
-<p>partner-page works!</p>
+<table class="table table-light">
+    <thead class='thead-dark'>
+      <tr>
+        <th>Product</th>
+        <th>Documentation</th>
+        <th>Request Access</th>
+      </tr>
+    </thead>
+    <tbody class="partners">
+      <tr *ngFor="let partner of parterns">
+        <th scope="row">{{<!--partner-->}}</th>
+          <td><a class="imagelink" href=""> <img src="assets/icons/eclipse/alltopics_co.gif" alt="Documentation" height="30"></a></td>
+          <td><a class="imagelink" href=""><img src="assets/icons/eclipse/addtsk_tsk.gif" alt="Request Access" height="30"></a></td>
+      </tr>
+    </tbody>
+  </table>
